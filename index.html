@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a1f44">
+<title>ASAD ONE — Smart Business Ecosystem (Prototype)</title>
+<meta name="description" content="Independent prototype by ABSAD TECH. All data is DEMO DATA.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<header class="hdr">
+  <div class="container hdr-in">
+    <a href="#/" class="brand"><span class="bm">A1</span><span class="bt"><strong>ASAD ONE</strong><small>ABSAD TECH prototype</small></span></a>
+    <button class="nt" id="nt" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav"><ul id="navul"></ul></nav>
+  </div>
+</header>
+<main id="main"><div id="app" class="container"></div></main>
+<button class="ail" id="ail" aria-label="Ask ASAD AI"><span class="p"></span> Ask ASAD AI</button>
+<div class="tr" id="toasts" aria-live="polite"></div>
+<footer class="ftr">
+  <div class="container fgrid">
+    <div><p><strong>ASAD ONE</strong> — Smart Business Ecosystem</p><p class="small">One Platform. All Businesses. Connected Customers and Creators.</p></div>
+    <div><p><strong>Divisions</strong></p><ul id="fdivs"></ul></div>
+    <div><p><strong>Prototype</strong></p><ul><li><a href="#/ai">ASAD AI</a></li><li><a href="#/creators">Creator Network</a></li><li><a href="#/campaigns">Ad Marketplace</a></li><li><a href="#/admin">Admin Demo</a></li></ul></div>
+  </div>
+  <div class="container flgl">
+    <p>Independent prototype by <strong>ABSAD TECH</strong>. Not an official ASAD Groups Limited product. All data is DEMO DATA. Role switching is a client-side demonstration only, not secure authentication.</p>
+  </div>
+</footer>
+<script src="js/data1.js"></script>
+<script src="js/data2.js"></script>
+<script src="js/data3.js"></script>
+<script src="js/core.js"></script>
+<script src="js/enquiry.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/creators.js"></script>
+<script src="js/campaigns.js"></script>
+<script src="js/watch.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
+:root{--navy:#0a1f44;--navy2:#112a58;--navy3:#1c3a70;--gold:#c9a227;--goldsoft:#e4c766;--bg:#f5f7fb;--card:#fff;--ink:#14213d;--muted:#5a6a82;--line:#e2e6ee;--ok:#1e8f5b;--warn:#b8860b;--danger:#b3261e;--r:14px;--sh:0 1px 3px rgba(10,31,68,.08);--sh2:0 8px 24px rgba(10,31,68,.12);--f:"Segoe UI",Roboto,-apple-system,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:var(--f);font-size:15px;line-height:1.55;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}img{max-width:100%;display:block}a{color:var(--navy3);text-decoration:none}a:hover{text-decoration:underline}button{font-family:inherit;cursor:pointer;font-size:inherit}:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 14px}.muted{color:var(--muted)}.small{font-size:12.5px}.hidden{display:none!important}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:6px;z-index:999}.skip:focus{left:8px}
+.hdr{position:sticky;top:0;z-index:90;background:var(--navy);color:#fff;box-shadow:var(--sh);border-bottom:3px solid var(--gold)}.hdr-in{display:flex;align-items:center;justify-content:space-between;min-height:58px;gap:10px}
+.brand{display:inline-flex;align-items:center;gap:9px;color:#fff}.brand:hover{text-decoration:none}.bm{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--gold),#a37f16);color:var(--navy);font-weight:800;font-size:13px}
+.bt strong{display:block;font-size:15px;letter-spacing:.5px}.bt small{display:block;font-size:10px;color:var(--goldsoft)}
+.nt{display:inline-flex;flex-direction:column;gap:4px;background:transparent;border:1px solid rgba(255,255,255,.25);padding:7px;border-radius:7px}.nt span{display:block;width:18px;height:2px;background:#fff;border-radius:2px}
+.nav{display:none;width:100%}.nav.open{display:block}.nav ul{list-style:none;padding:0 0 10px;margin:0;display:flex;flex-direction:column;gap:2px}.nav a{display:block;color:#fff;padding:9px 11px;border-radius:7px;font-size:14px;font-weight:500}.nav a:hover,.nav a.on{background:var(--navy3);text-decoration:none}.nav a.on{color:var(--goldsoft)}
+main{padding:16px 0 40px;min-height:60vh}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 16px;border-radius:9px;border:1px solid transparent;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;transition:transform .05s,background .15s}.btn:active{transform:translateY(1px)}
+.btn.pri{background:var(--gold);color:var(--navy)}.btn.pri:hover{background:var(--goldsoft);text-decoration:none}
+.btn.out{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}.btn.out:hover{background:rgba(255,255,255,.08);text-decoration:none}
+.btn.nvy{background:var(--navy);color:#fff}.btn.nvy:hover{background:var(--navy3);text-decoration:none}
+.btn.gh{background:transparent;color:var(--navy);border-color:var(--line)}.btn.gh:hover{background:#eef1f7;text-decoration:none}
+.btn.sm{padding:6px 11px;font-size:12.5px;border-radius:7px}.btn.blk{width:100%}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:700;letter-spacing:.3px;padding:3px 8px;border-radius:999px;background:#eef1f7;color:var(--navy3)}.pill.d{background:#fff4d1;color:#7a5c00;border:1px solid #f0dc92}.pill.ok{background:#e3f5ec;color:var(--ok)}.pill.w{background:#fdf3d8;color:var(--warn)}.pill.dn{background:#fbe6e4;color:var(--danger)}.pill.g{background:#e6e9f0;color:var(--navy3)}
+.ntc{border-left:4px solid var(--gold);background:#fffbeb;padding:11px 12px;border-radius:7px;font-size:13px;color:#4a3a00;margin:12px 0}.ntc strong{color:var(--navy)}.ntc.blue{border-left-color:var(--navy3);background:#eef2fa;color:var(--ink)}
+.tr{position:fixed;right:10px;bottom:78px;z-index:400;display:flex;flex-direction:column;gap:6px;max-width:320px}.tst{background:var(--navy);color:#fff;padding:10px 13px;border-radius:9px;font-size:13px;box-shadow:var(--sh2);border-left:4px solid var(--gold);animation:ti .2s}.tst.ok{border-left-color:var(--ok)}.tst.err{border-left-color:var(--danger)}@keyframes ti{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ail{position:fixed;right:14px;bottom:14px;z-index:300;display:inline-flex;align-items:center;gap:7px;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:999px;padding:9px 14px;font-weight:700;font-size:13px;box-shadow:var(--sh2)}.ail:hover{background:var(--navy3)}.ail .p{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pl 1.8s infinite}@keyframes pl{0%{box-shadow:0 0 0 0 rgba(201,162,39,.7)}70%{box-shadow:0 0 0 9px rgba(201,162,39,0)}100%{box-shadow:0 0 0 0 rgba(201,162,39,0)}}
+.ftr{background:var(--navy);color:#cfd6e3;padding:24px 0 18px;margin-top:36px;border-top:3px solid var(--gold)}.fgrid{display:grid;grid-template-columns:1fr;gap:18px}.fgrid p{margin:0 0 4px}.fgrid strong{color:#fff}.fgrid ul{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:3px}.fgrid a{color:#cfd6e3}.fgrid a:hover{color:var(--goldsoft)}.flgl{border-top:1px solid rgba(255,255,255,.12);margin-top:16px;padding-top:12px;color:#9aa6bd;font-size:12px}
+@media(min-width:900px){main{padding:24px 0 52px}.nav{display:block!important;width:auto}.nav ul{flex-direction:row;padding-bottom:0}.nt{display:none}.fgrid{grid-template-columns:2fr 1fr 1fr}}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 75%);color:#fff;border-radius:var(--r);padding:24px 18px;margin:4px 0 18px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.35),transparent 70%);pointer-events:none}
+.hero h1{margin:0 0 6px;font-size:24px;line-height:1.2}.hero .tag{color:var(--goldsoft);font-weight:600;margin:0 0 10px;font-size:14px}.hero p{margin:0 0 14px;font-size:14px;color:#d8deec}.hero-b{display:inline-block;font-size:10.5px;letter-spacing:1px;font-weight:700;color:var(--navy);background:var(--goldsoft);padding:3px 9px;border-radius:999px;margin-bottom:10px}.hacts{display:flex;flex-wrap:wrap;gap:8px}
+.sh{margin:6px 0 14px}.sh h2{margin:0 0 3px;font-size:19px;color:var(--navy)}.sh p{margin:0;color:var(--muted);font-size:13.5px}
+.dgrid{display:grid;grid-template-columns:1fr;gap:12px}.dcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px;transition:box-shadow .15s,transform .15s;color:inherit}.dcard:hover{box-shadow:var(--sh2);transform:translateY(-2px);text-decoration:none}
+.dic{width:42px;height:42px;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;color:#fff;background:var(--navy)}.dcard h3{margin:0;font-size:15px;color:var(--navy)}.dcard p{margin:0;font-size:13px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:16px}.card h3{margin:0 0 8px;color:var(--navy);font-size:16px}
+.tb{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}.tb input,.tb select{width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;font-size:14.5px;color:var(--ink)}.tb input:focus,.tb select:focus{outline:none;border-color:var(--navy3);box-shadow:0 0 0 3px rgba(28,58,112,.15)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.chip{border:1px solid var(--line);background:#fff;color:var(--navy);padding:5px 11px;border-radius:999px;font-size:12.5px;font-weight:600;cursor:pointer}.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.pgrid{display:grid;grid-template-columns:1fr;gap:12px}.pcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column;transition:box-shadow .15s,transform .15s}.pcard:hover{box-shadow:var(--sh2);transform:translateY(-2px)}
+.pmedia{aspect-ratio:16/10;background:linear-gradient(135deg,var(--navy),var(--navy3));color:#fff;display:flex;align-items:center;justify-content:center;font-size:38px;position:relative}.pmedia .dt{position:absolute;top:8px;left:8px;background:rgba(255,255,255,.92);color:var(--navy);font-size:9.5px;font-weight:800;letter-spacing:.5px;padding:2px 6px;border-radius:5px}
+.pbody{padding:12px;display:flex;flex-direction:column;gap:6px;flex:1}.pbody h3{margin:0;font-size:14px;color:var(--navy)}.pbody .d{margin:0;font-size:12.5px;color:var(--muted);flex:1}.pbody .pr{font-weight:700;color:var(--navy);font-size:13px}.pacts{display:flex;gap:6px;margin-top:4px}.pacts .btn{flex:1}
+.dtl{display:grid;grid-template-columns:1fr;gap:16px}.dmedia{aspect-ratio:16/10;border-radius:var(--r);background:linear-gradient(135deg,var(--navy),var(--navy3));display:flex;align-items:center;justify-content:center;color:#fff;font-size:60px}.dbody h1{margin:0 0 4px;font-size:21px;color:var(--navy)}.kick{color:var(--gold);font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.spec{list-style:none;padding:0;margin:10px 0;display:grid;gap:5px}.spec li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}.spec li span:first-child{color:var(--muted)}
+.fg{display:grid;grid-template-columns:1fr;gap:10px}.fld label{display:block;font-size:12.5px;font-weight:600;margin-bottom:4px;color:var(--navy)}.fld input,.fld select,.fld textarea{width:100%;padding:10px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;font-size:14.5px;color:var(--ink);font-family:inherit}.fld textarea{resize:vertical;min-height:80px}.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--navy3);box-shadow:0 0 0 3px rgba(28,58,112,.15)}.fld .err{color:var(--danger);font-size:11.5px;margin-top:3px;display:none}.fld.bad .err{display:block}.fld.bad input,.fld.bad textarea,.fld.bad select{border-color:var(--danger)}.fld.full{grid-column:1/-1}
+.chat{display:flex;flex-direction:column;height:calc(100vh - 200px);min-height:400px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}.chat-h{padding:12px 14px;background:var(--navy);color:#fff;display:flex;align-items:center;gap:8px}.chat-h strong{font-size:14px}.chat-h small{color:var(--goldsoft);font-size:11px;display:block}
+.chat-b{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#f8fafd}.msg{max-width:88%;padding:10px 12px;border-radius:12px;font-size:13.5px;line-height:1.5}.msg.u{align-self:flex-end;background:var(--navy);color:#fff;border-bottom-right-radius:4px}.msg.a{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}.msg.a .src{margin-top:6px;font-size:11px;color:var(--muted);border-top:1px dashed var(--line);padding-top:5px}
+.chat-f{padding:10px;border-top:1px solid var(--line);display:flex;gap:6px;background:#fff}.chat-f input{flex:1;padding:9px 12px;border-radius:999px;border:1px solid var(--line);font-size:14px}.chat-f button{border:none;background:var(--gold);color:var(--navy);border-radius:999px;padding:0 16px;font-weight:700}
+.player-wrap{position:relative;background:#000;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9}.player-wrap video,.player-wrap .simvid{width:100%;height:100%;object-fit:cover;display:block}.simvid{position:relative;background:linear-gradient(120deg,#0a1f44,#1c3a70,#112a58,#0a1f44);background-size:400% 400%;animation:grad 8s ease infinite;display:flex;align-items:center;justify-content:center;color:#fff}@keyframes grad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.simvid .center-lbl{position:absolute;bottom:12px;left:12px;color:rgba(255,255,255,.7);font-size:11px;background:rgba(0,0,0,.4);padding:3px 8px;border-radius:4px}.simvid .big{font-size:44px;opacity:.4}
+.sponsored-badge{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.72);color:#fff;font-size:10px;font-weight:800;letter-spacing:1px;padding:3px 8px;border-radius:4px;z-index:5}.sponsored-badge::before{content:"SPONSORED"}
+.ad-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,.92),rgba(0,0,0,.7) 70%,transparent);padding:14px;color:#fff;z-index:4;transform:translateY(100%);transition:transform .4s ease;opacity:0}.ad-overlay.show{transform:none;opacity:1}.ad-overlay h4{margin:0 0 4px;font-size:14px}.ad-overlay p{margin:0 0 8px;font-size:12px;color:#cfd6e3}
+.ad-cards{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}.ad-card{flex:0 0 auto;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:8px 10px;display:flex;gap:8px;align-items:center;color:#fff;min-width:190px}.ad-card:hover{background:rgba(255,255,255,.2);text-decoration:none}.ad-card .ic{font-size:22px}.ad-card b{font-size:12.5px;display:block}.ad-card small{font-size:10.5px;color:var(--goldsoft)}
+.ref-bar{margin-top:10px;padding:8px 10px;background:#eef2fa;border:1px solid #cfd9eb;border-radius:8px;font-size:11.5px;color:var(--navy)}.ref-bar code{background:#fff;padding:1px 5px;border-radius:4px;font-size:11px}
+.drop{position:relative;border:2px dashed var(--line);border-radius:var(--r);padding:28px 16px;text-align:center;background:#fff;cursor:pointer;transition:border-color .15s}.drop:hover,.drop.on{border-color:var(--navy3);background:#f2f6fc}.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px;border-bottom:1px solid var(--line)}.tab{background:transparent;border:none;padding:8px 12px;font-size:13px;font-weight:600;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap}.tab.on{color:var(--navy);border-bottom-color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}.stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}.stat .v{font-size:22px;font-weight:800;color:var(--navy)}
+.list{display:flex;flex-direction:column;gap:8px}.row-i{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}.row-i .mn{flex:1;min-width:180px}.row-i .mn strong{color:var(--navy);font-size:14px}.row-i .mn small{color:var(--muted);font-size:12px;display:block;margin-top:2px}.row-i .ac{display:flex;gap:6px;flex-wrap:wrap}
+.empty{text-align:center;padding:32px 14px;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r);background:#fff}
+@media(min-width:480px){.hero h1{font-size:28px}.pgrid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:640px){.dgrid{grid-template-columns:repeat(2,1fr)}.tb{flex-direction:row;align-items:center}.tb input{max-width:320px}.fg{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.hero{padding:40px 34px;margin:8px 0 22px}.hero h1{font-size:34px}.dgrid{grid-template-columns:repeat(3,1fr)}.pgrid{grid-template-columns:repeat(3,1fr)}.dtl{grid-template-columns:1fr 1fr;gap:22px}}
+@media(min-width:1100px){.pgrid{grid-template-columns:repeat(4,1fr)}}
+window.ASAD = window.ASAD || {};
+window.ASAD.DIV = window.ASAD.DIV || [];
+window.ASAD.DIV.push(
+  {id:"energy",name:"ASAD Energy Fleet & CNG",icon:"⛽",tag:"Clean energy, fleet solutions and CNG infrastructure.",support:"energy.demo@asadone.example",cats:["Conversion","Refuelling","Fleet","Equipment"],products:[
+    {id:"en1",name:"CNG Conversion Kit — Sedan",cat:"Conversion",desc:"Demonstration bi-fuel conversion kit listing.",price:"DEMO ₦—",icon:"🚗"},
+    {id:"en2",name:"CNG Conversion Kit — SUV",cat:"Conversion",desc:"Demonstration SUV conversion listing.",price:"DEMO ₦—",icon:"🚙"},
+    {id:"en3",name:"Fleet Retrofitting Service",cat:"Fleet",desc:"Illustrative service for converting company fleets.",price:"DEMO quote",icon:"🚐"},
+    {id:"en4",name:"CNG Station Access — Demo",cat:"Refuelling",desc:"Demonstration station access concept.",price:"DEMO rate TBC",icon:"⛽"},
+    {id:"en5",name:"Gas Cylinder (Demo)",cat:"Equipment",desc:"Illustrative cylinder listing.",price:"DEMO TBC",icon:"🛢️"}
+  ]},
+  {id:"infratech",name:"ASAD Infra-Tech",icon:"🛰️",tag:"Smart infrastructure, software and IoT solutions.",support:"infratech.demo@asadone.example",cats:["Software","IoT","Network","Security"],products:[
+    {id:"it1",name:"Enterprise Suite (Demo)",cat:"Software",desc:"Demonstration ERP-style platform.",price:"DEMO TBC",icon:"💼"},
+    {id:"it2",name:"Smart Building IoT Kit",cat:"IoT",desc:"Illustrative IoT sensor concept.",price:"DEMO TBC",icon:"📡"},
+    {id:"it3",name:"CCTV & Access Control",cat:"Security",desc:"Demonstration security integration.",price:"DEMO quote",icon:"🎥"},
+    {id:"it4",name:"Enterprise Network Install",cat:"Network",desc:"Illustrative network deployment service.",price:"DEMO quote",icon:"🔌"}
+  ]},
+  {id:"medics",name:"ASAD Medics",icon:"🩺",tag:"Health screening, medical supply and telemedicine concepts.",support:"medics.demo@asadone.example",cats:["Screening","Equipment","Telemedicine","Laboratory"],products:[
+    {id:"me1",name:"Corporate Health Screening",cat:"Screening",desc:"Illustrative screening package concept. No medical advice provided.",price:"DEMO TBC",icon:"🩺"},
+    {id:"me2",name:"Medical Equipment Supply",cat:"Equipment",desc:"Demonstration medical equipment listing.",price:"DEMO quote",icon:"🏥"},
+    {id:"me3",name:"Telemedicine Consultation",cat:"Telemedicine",desc:"Illustrative telemedicine platform concept.",price:"DEMO TBC",icon:"📱"},
+    {id:"me4",name:"Diagnostic Lab Services",cat:"Laboratory",desc:"Demonstration lab service listing.",price:"DEMO TBC",icon:"🧪"}
+  ]}
+);
+window.ASAD.DIV.push(
+  {id:"fertilizer",name:"ASAD Fertilizer",icon:"🌱",tag:"Fertilizer blends, soil advisory and farm support.",support:"fertilizer.demo@asadone.example",cats:["Blends","Organic","Soil Testing","Advisory"],products:[
+    {id:"fe1",name:"NPK Blend — Demo Grade A",cat:"Blends",desc:"Illustrative NPK blend listing.",price:"DEMO TBC",icon:"🌾"},
+    {id:"fe2",name:"Organic Compost Blend",cat:"Organic",desc:"Demonstration organic compost listing.",price:"DEMO TBC",icon:"🍃"},
+    {id:"fe3",name:"Soil Testing Service",cat:"Soil Testing",desc:"Illustrative soil sampling concept.",price:"DEMO TBC",icon:"🧫"},
+    {id:"fe4",name:"Farm Advisory Package",cat:"Advisory",desc:"Demonstration agronomy advisory.",price:"DEMO quote",icon:"🚜"}
+  ]},
+  {id:"travel",name:"ASAD Travel & Tours",icon:"✈️",tag:"Pilgrimage, business travel and tour packages.",support:"travel.demo@asadone.example",cats:["Pilgrimage","Business","Tours","Visa"],products:[
+    {id:"tr1",name:"Pilgrimage Package (Demo)",cat:"Pilgrimage",desc:"Illustrative pilgrimage package concept.",price:"DEMO TBC",icon:"🕋"},
+    {id:"tr2",name:"Corporate Business Travel",cat:"Business",desc:"Demonstration business travel booking concept.",price:"DEMO quote",icon:"💼"},
+    {id:"tr3",name:"Leisure Tour Package",cat:"Tours",desc:"Illustrative leisure tour listing.",price:"DEMO TBC",icon:"🏝️"},
+    {id:"tr4",name:"Visa Documentation Support",cat:"Visa",desc:"Demonstration visa support concept.",price:"DEMO TBC",icon:"📄"}
+  ]},
+  {id:"shelter",name:"ASAD Modern Shelter / Universal",icon:"🏠",tag:"Housing, commercial space and property inspection concepts.",support:"shelter.demo@asadone.example",cats:["Residential","Commercial","Inspection","Construction"],products:[
+    {id:"sh1",name:"Residential Unit (Demo)",cat:"Residential",desc:"Illustrative residential unit listing. No real property represented.",price:"DEMO TBC",icon:"🏡"},
+    {id:"sh2",name:"Commercial Space (Demo)",cat:"Commercial",desc:"Demonstration commercial space listing.",price:"DEMO TBC",icon:"🏢"},
+    {id:"sh3",name:"Property Inspection Request",cat:"Inspection",desc:"Demonstration inspection scheduling concept.",price:"DEMO TBC",icon:"🔍"},
+    {id:"sh4",name:"Construction Services",cat:"Construction",desc:"Illustrative construction service listing.",price:"DEMO quote",icon:"🏗️"}
+  ]}
+);
+window.ASAD.SEED_KB = [
+  {id:"k1",division:"energy",title:"CNG Conversion Overview",keywords:"cng conversion energy kit fuel gas",body:"ASAD Energy Fleet & CNG handles CNG conversion for sedans and SUVs, fleet retrofitting, station access and equipment. Prices are not published here — please confirm with the Energy division.",published:true},
+  {id:"k2",division:"infratech",title:"Infra-Tech Software & IoT",keywords:"software iot network enterprise cctv security infra",body:"ASAD Infra-Tech covers enterprise software, smart building IoT, network installation, CCTV/security and managed cloud concepts. All listings are demonstration only.",published:true},
+  {id:"k3",division:"medics",title:"Medical Services Policy",keywords:"medical health doctor screening medics telemedicine",body:"ASAD Medics concept includes health screening, equipment and telemedicine. This platform does NOT provide medical advice, patient records or regulated sales. Please contact the Medics division directly.",published:true},
+  {id:"k4",division:"fertilizer",title:"Fertilizer & Soil Advisory",keywords:"fertilizer farm soil npk organic blend agronomy",body:"ASAD Fertilizer covers NPK blends, organic compost, soil testing and farm advisory. Confirm product specs and pricing with the Fertilizer division.",published:true},
+  {id:"k5",division:"travel",title:"Travel & Pilgrimage Services",keywords:"travel tour pilgrimage visa flight booking",body:"ASAD Travel & Tours covers pilgrimage packages, business travel, leisure tours and visa documentation support. Live fares and visas are not represented here — confirm with the Travel division.",published:true},
+  {id:"k6",division:"shelter",title:"Property & Inspection",keywords:"property shelter house residential commercial inspection construction",body:"ASAD Modern Shelter / Universal concept includes residential, commercial, property inspection and construction listings. No real properties are represented. Confirm everything with the Shelter division.",published:true},
+  {id:"k7",division:"",title:"Creator Network",keywords:"creator influencer ambassador join register apply program network",body:"The ASAD Creator Network is open to content creators, influencers, actors, musicians, celebrities, brand ambassadors, real estate agents, sales partners and distributors. Registration is a demonstration and does not promise work or commission.",published:true},
+  {id:"k8",division:"",title:"Advertising Campaigns",keywords:"campaign advertise advertising ad marketing sponsored",body:"ASAD AD Marketplace campaigns are created per division. Creators can apply. All campaigns here are DEMO campaigns. Commission is campaign-specific and set by the admin.",published:true}
+];
+window.ASAD.SEED_CAMPAIGNS = [
+  {id:"c1",division:"energy",title:"CNG Conversion — Awareness Drive (Demo)",product:"en1",desc:"Seeking creators to explain CNG conversion benefits for sedans.",requirements:"Must own a sedan; 1 short-form video per week.",audience:"Car owners, fleet managers",duration:"30 days",deadline:"2026-01-15",instructions:"Include #Sponsored and mention ASAD CNG. No medical or price claims.",destination:"#/p/en1",commission:"Qualified-lead: DEMO ₦5,000 per enquiry",status:"Active"},
+  {id:"c2",division:"travel",title:"Pilgrimage Package — Creator Brief (Demo)",product:"tr1",desc:"Explain ASAD pilgrimage package concept to families.",requirements:"30k+ followers; travel or lifestyle audience.",audience:"Families, faith travellers",duration:"45 days",deadline:"2026-01-20",instructions:"Use #Sponsored. Direct audiences to ASAD Travel enquiry form.",destination:"#/p/tr1",commission:"Sale-based: DEMO 3% of verified sale",status:"Active"},
+  {id:"c3",division:"fertilizer",title:"NPK Farm Awareness (Demo)",product:"fe1",desc:"Farm demonstration content for NPK blends.",requirements:"Agriculture creators with farm footage.",audience:"Smallholder farmers",duration:"30 days",deadline:"2026-02-01",instructions:"#Sponsored. No yield guarantees.",destination:"#/p/fe1",commission:"Qualified-lead: DEMO ₦3,000 per enquiry",status:"Active"},
+  {id:"c4",division:"shelter",title:"Property Inspection Drive (Demo)",product:"sh3",desc:"Promote ASAD property inspection concept.",requirements:"Real estate creators based in Nigeria.",audience:"Home buyers",duration:"60 days",deadline:"2026-02-10",instructions:"#Sponsored. Clarify this is a demonstration.",destination:"#/p/sh3",commission:"Sale-based: DEMO 1.5% of verified sale",status:"Active"}
+];
+window.ASAD.S = function(k,d){try{var v=localStorage.getItem("a1_"+k);return v?JSON.parse(v):d}catch(e){return d}};
+window.ASAD.W = function(k,v){try{localStorage.setItem("a1_"+k,JSON.stringify(v))}catch(e){}};
+window.ASAD.sb = {
+  kb:function(){return window.ASAD.S("kb",window.ASAD.SEED_KB)}, setKb:function(v){window.ASAD.W("kb",v)},
+  campaigns:function(){return window.ASAD.S("campaigns",window.ASAD.SEED_CAMPAIGNS)}, setCampaigns:function(v){window.ASAD.W("campaigns",v)},
+  enquiries:function(){return window.ASAD.S("enquiries",[])}, setEnquiries:function(v){window.ASAD.W("enquiries",v)},
+  creators:function(){return window.ASAD.S("creators",[])}, setCreators:function(v){window.ASAD.W("creators",v)},
+  creatorApps:function(){return window.ASAD.S("creatorApps",[])}, setCreatorApps:function(v){window.ASAD.W("creatorApps",v)},
+  campaignApps:function(){return window.ASAD.S("campaignApps",[])}, setCampaignApps:function(v){window.ASAD.W("campaignApps",v)},
+  videos:function(){return window.ASAD.S("demoVideos",[])}, setVideos:function(v){window.ASAD.W("demoVideos",v)},
+  clicks:function(){return window.ASAD.S("clicks",[])}, setClicks:function(v){window.ASAD.W("clicks",v)},
+  adConfig:function(){return window.ASAD.S("adConfig",{})}, setAdConfig:function(v){window.ASAD.W("adConfig",v)},
+  role:function(){return window.ASAD.S("role","super")}, setRole:function(v){window.ASAD.W("role",v)},
+  ref:function(){return sessionStorage.getItem("a1_ref")||""}, setRef:function(v){sessionStorage.setItem("a1_ref",v||"")}
+};
+window.ASAD.initState = function(){
+  if(!localStorage.getItem("a1_seeded")){
+    window.ASAD.W("kb",window.ASAD.SEED_KB);
+    window.ASAD.W("campaigns",window.ASAD.SEED_CAMPAIGNS);
+    window.ASAD.W("enquiries",[]);window.ASAD.W("creators",[]);window.ASAD.W("campaignApps",[]);window.ASAD.W("videos",[]);window.ASAD.W("clicks",[]);
+    window.ASAD.W("adConfig",{video:"v1",campaign:"c1"});
+    window.ASAD.W("demoVideos",[{id:"v1",title:"ASAD CNG Demo — Concept Video",creator:"demo-creator",division:"energy",product:"en1",campaign:"c1",status:"Published",createdAt:new Date().toISOString()}]);
+    window.ASAD.W("role","super");
+    localStorage.setItem("a1_seeded","1");
+  }
+};function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
+function toast(m,k){var el=document.createElement("div");el.className="tst"+(k?" "+k:"");el.textContent=m;document.getElementById("toasts").appendChild(el);setTimeout(function(){el.remove()},3400)}
+function div(id){for(var i=0;i<window.ASAD.DIV.length;i++)if(window.ASAD.DIV[i].id===id)return window.ASAD.DIV[i];return null}
+function prod(id){for(var i=0;i<window.ASAD.DIV.length;i++)for(var j=0;j<window.ASAD.DIV[i].products.length;j++){var p=window.ASAD.DIV[i].products[j];if(p.id===id)return{division:window.ASAD.DIV[i],product:p}}return null}
+function campaign(id){return window.ASAD.sb.campaigns().filter(function(c){return c.id===id})[0]}
+function video(id){return window.ASAD.sb.videos().filter(function(v){return v.id===id})[0]}
+function creator(id){return window.ASAD.sb.creators().filter(function(c){return c.id===id})[0]}
+function newId(p){return (p||"id")+"_"+Date.now().toString(36)+Math.floor(Math.random()*900+100)}
+function genRef(cid){return "asadone.example/ref/"+(cid||"CREATOR001").toUpperCase()}
+function refCode(cid){return (cid||"CREATOR001").toUpperCase()}
+
+var NAV=[
+  {href:"#/",key:"home",label:"Home"},{href:"#/divisions",key:"divisions",label:"Divisions"},
+  {href:"#/ai",key:"ai",label:"ASAD AI"},{href:"#/creators",key:"creators",label:"Creators"},
+  {href:"#/campaigns",key:"campaigns",label:"Campaigns"},{href:"#/studio",key:"studio",label:"Video Studio"},
+  {href:"#/watch",key:"watch",label:"ASAD ONE Player"},{href:"#/admin",key:"admin",label:"Admin"}
+];
+
+window.ASAD.route = function(){
+  var h=(location.hash||"#/").replace(/^#/,"");
+  var qI=h.indexOf("?");var path=qI>=0?h.slice(0,qI):h;var qs=qI>=0?h.slice(qI+1):"";
+  var parts=path.split("/").filter(Boolean);var head=parts[0]||"home";
+  window.scrollTo(0,0);
+  document.querySelectorAll(".nav a").forEach(function(a){a.classList.remove("on")});
+  var app=document.getElementById("app");
+  try{
+    if(head==="home"||head===""){setNav("home");renderHome(app);return}
+    if(head==="divisions"){setNav("divisions");renderDivisionsIndex(app);return}
+    if(head==="div"&&parts[1]){setNav("divisions");renderDivision(app,parts[1]);return}
+    if(head==="p"&&parts[1]){setNav("divisions");renderProduct(app,parts[1]);return}
+    if(head==="enquiry"){setNav("");window.ASAD.renderEnquiry(app,qs);return}
+    if(head==="enq"&&parts[1]){setNav("");window.ASAD.renderEnquiryLookup(app,parts[1]);return}
+    if(head==="ai"){setNav("ai");window.ASAD.renderAI(app);return}
+    if(head==="creators"){setNav("creators");window.ASAD.renderCreators(app);return}
+    if(head==="creator"&&parts[1]){setNav("creators");window.ASAD.renderCreatorDash(app,parts[1]);return}
+    if(head==="campaigns"){setNav("campaigns");window.ASAD.renderCampaigns(app);return}
+    if(head==="campaign"&&parts[1]){setNav("campaigns");window.ASAD.renderCampaign(app,parts[1]);return}
+    if(head==="studio"){setNav("studio");window.ASAD.renderStudio(app);return}
+    if(head==="watch"){setNav("watch");window.ASAD.renderWatch(app,parts[1]||"");return}
+    if(head==="admin"){setNav("admin");window.ASAD.renderAdmin(app);return}
+    if(head==="ref"&&parts[1]){window.ASAD.sb.setRef(parts[1]);window.ASAD.renderRefLanding(app,parts[1]);return}
+    renderNotFound(app);
+  }catch(e){app.innerHTML='<div class="empty">Error: '+esc(e.message)+'</div>'}
+};
+function setNav(k){document.querySelectorAll(".nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("data-k")===k)})}
+function renderNotFound(app){app.innerHTML='<div class="empty" style="margin-top:20px"><h3 style="margin-top:0;color:var(--navy)">Page not found</h3><p>The route does not exist in this prototype.</p><a class="btn nvy" href="#/">Back to Home</a></div>'}
+
+function renderHome(app){
+  var dc=window.ASAD.DIV.map(function(d){return '<a class="dcard" href="#/div/'+d.id+'"><span class="dic">'+d.icon+'</span><h3>'+esc(d.name)+'</h3><p>'+esc(d.tag)+'</p><span class="pill">'+d.products.length+' demo listings</span></a>'}).join("");
+  app.innerHTML=
+    '<section class="hero"><span class="hero-b">INDEPENDENT PROTOTYPE · ABSAD TECH</span><h1>ASAD ONE — Smart Business Ecosystem</h1><p class="tag">One Platform. All Businesses. Connected Customers and Creators.</p><p>Six business divisions, a customer assistant, a creator network and an advertising marketplace — connected on a single platform. All data is DEMO DATA.</p><div class="hacts"><a class="btn pri" href="#/divisions">Explore Divisions</a><a class="btn out" href="#/ai">Ask ASAD AI</a><a class="btn out" href="#/watch">Watch ASAD ONE</a></div></section>'+
+    '<section class="sh"><h2>Six Business Divisions</h2><p>Each division has its own catalogue, support contact and enquiry flow.</p></section>'+
+    '<section class="dgrid">'+dc+'</section>'+
+    '<div class="ntc"><strong>Prototype disclaimer.</strong> Concept demonstration by ABSAD TECH for discussion with ASAD Groups Limited. No ASAD internal systems, customers, inventory, properties, medical records or advertising accounts are accessed.</div>'+
+    '<section class="sh" style="margin-top:22px"><h2>Quick Demo Journeys</h2><p>Try each path to see how ASAD ONE connects customers, creators and divisions.</p></section>'+
+    '<div class="dgrid"><a class="dcard" href="#/ai"><span class="dic">🤖</span><h3>Ask ASAD AI</h3><p>Chat with the customer assistant to discover products and services.</p><span class="pill">Simulated AI</span></a><a class="dcard" href="#/creators"><span class="dic">🎬</span><h3>Creator Signup</h3><p>Register as a creator, apply for campaigns, track your referral link.</p><span class="pill">Demo registration</span></a><a class="dcard" href="#/watch"><span class="dic">📺</span><h3>Watch ASAD ONE</h3><p>See sponsored overlays and clickable product ads on the ASAD ONE player.</p><span class="pill">Sponsored demo</span></a><a class="dcard" href="#/admin"><span class="dic">📊</span><h3>Admin Demo</h3><p>Explore the group dashboard with role switching and analytics.</p><span class="pill">Client-side demo</span></a></div>'+
+    '<section class="sh" style="margin-top:22px"><h2>Follow up an Enquiry</h2><p>Use the reference you received after submitting.</p></section>'+
+    '<div class="card"><form id="lk" class="tb" style="flex-direction:row"><input id="lkref" placeholder="e.g. ENQ-123456" aria-label="Enquiry reference"><button class="btn nvy" type="submit">Look Up</button></form><p class="small muted">Enquiries are stored only in your browser.</p></div>';
+  document.getElementById("lk").addEventListener("submit",function(e){e.preventDefault();var r=document.getElementById("lkref").value.trim();if(!r){toast("Enter a reference","err");return}location.hash="#/enq/"+encodeURIComponent(r)});
+}
+
+function renderDivisionsIndex(app){
+  var cards=window.ASAD.DIV.map(function(d){return '<a class="dcard" href="#/div/'+d.id+'"><span class="dic">'+d.icon+'</span><h3>'+esc(d.name)+'</h3><p>'+esc(d.tag)+'</p><span class="pill">'+d.cats.length+' categories · '+d.products.length+' listings</span></a>'}).join("");
+  app.innerHTML='<div class="sh"><h2>All Divisions</h2><p>Browse the six demonstration business divisions of ASAD ONE.</p></div><div class="dgrid">'+cards+'</div>';
+}
+
+function renderDivision(app,id){
+  var d=div(id);if(!d){renderNotFound(app);return}
+  var chips=['All'].concat(d.cats).map(function(c,i){return '<button class="chip'+(i===0?" on":"")+'" data-cat="'+esc(c)+'">'+esc(c)+'</button>'}).join("");
+  app.innerHTML='<nav class="small muted" style="margin-bottom:8px"><a href="#/">Home</a> › <a href="#/divisions">Divisions</a> › '+esc(d.name)+'</nav><section class="hero" style="padding:22px 16px"><span class="hero-b">DEMO DATA</span><h1>'+esc(d.name)+'</h1><p class="tag">'+esc(d.tag)+'</p><div class="hacts"><a class="btn pri" href="#/enquiry?division='+d.id+'">Make an Enquiry</a><a class="btn out" href="#/ai?about='+d.id+'">Ask ASAD AI</a></div></section><div class="tb"><input id="cs" placeholder="Search listings…" aria-label="Search"></div><div class="chips" id="chips">'+chips+'</div><div class="pgrid" id="pg"></div><div class="ntc" style="margin-top:14px"><strong>Support.</strong> '+esc(d.support)+' — demonstration contact only.</div>';
+  var activeCat="All",q="";
+  function draw(){
+    var list=d.products.filter(function(p){var okC=activeCat==="All"||p.cat===activeCat;var okQ=!q||(p.name+" "+p.desc).toLowerCase().indexOf(q)>=0;return okC&&okQ});
+    var g=document.getElementById("pg");if(!list.length){g.innerHTML='<div class="empty" style="grid-column:1/-1">No listings match your filter.</div>';return}
+    g.innerHTML=list.map(function(p){return '<article class="pcard"><div class="pmedia"><span class="dt">DEMO</span><span>'+p.icon+'</span></div><div class="pbody"><h3>'+esc(p.name)+'</h3><p class="d">'+esc(p.desc)+'</p><div class="pr">'+esc(p.price)+'</div><div class="pacts"><a class="btn gh sm" href="#/p/'+p.id+'">Details</a><a class="btn nvy sm" href="#/enquiry?division='+d.id+'&product='+p.id+'">Enquire</a></div></div></article>'}).join("");
+  }
+  document.getElementById("cs").addEventListener("input",function(e){q=e.target.value.toLowerCase().trim();draw()});
+  document.getElementById("chips").addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;activeCat=b.getAttribute("data-cat");document.querySelectorAll("#chips .chip").forEach(function(c){c.classList.remove("on")});b.classList.add("on");draw()});
+  draw();
+}
+
+function renderProduct(app,id){
+  var f=prod(id);if(!f){renderNotFound(app);return}var d=f.division,p=f.product;
+  app.innerHTML='<nav class="small muted" style="margin-bottom:8px"><a href="#/">Home</a> › <a href="#/div/'+d.id+'">'+esc(d.name)+'</a> › '+esc(p.name)+'</nav><div class="dtl"><div class="dmedia">'+p.icon+'</div><div class="dbody"><span class="kick">DEMO · '+esc(d.name)+'</span><h1>'+esc(p.name)+'</h1><p class="muted">'+esc(p.desc)+'</p><ul class="spec"><li><span>Division</span><span>'+esc(d.name)+'</span></li><li><span>Category</span><span>'+esc(p.cat)+'</span></li><li><span>Price</span><span>'+esc(p.price)+'</span></li><li><span>Availability</span><span>DEMO — confirm with division</span></li></ul><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn nvy" href="#/enquiry?division='+d.id+'&product='+p.id+'">Request Quotation</a><a class="btn gh" href="#/div/'+d.id+'">Back to Division</a></div><div class="ntc"><strong>Note.</strong> Prices and availability are placeholders. Submitting an enquiry does not create a contract.</div></div></div>';
+}
+
+window.addEventListener("hashchange",window.ASAD.route);
+window.addEventListener("DOMContentLoaded",function(){
+  window.ASAD.initState();
+  var ul=document.getElementById("navul");if(ul)ul.innerHTML=NAV.map(function(n){return '<li><a href="'+n.href+'" data-k="'+n.key+'">'+n.label+'</a></li>'}).join("");
+  var fdivs=document.getElementById("fdivs");if(fdivs)fdivs.innerHTML=window.ASAD.DIV.map(function(d){return '<li><a href="#/div/'+d.id+'">'+esc(d.name)+'</a></li>'}).join("");
+  var nt=document.getElementById("nt");if(nt)nt.addEventListener("click",function(){var n=document.getElementById("nav");var open=n.classList.toggle("open");this.setAttribute("aria-expanded",open?"true":"false")});
+  var nav=document.getElementById("nav");if(nav)nav.addEventListener("click",function(e){if(e.target.tagName==="A"){document.getElementById("nav").classList.remove("open");document.getElementById("nt").setAttribute("aria-expanded","false")}});
+  var ail=document.getElementById("ail");if(ail)ail.addEventListener("click",function(){location.hash="#/ai"});
+  window.ASAD.route();
+});
+window.ASAD.renderEnquiry = function(app,qs){
+  var p=new URLSearchParams(qs||"");var dId=p.get("division")||"",pId=p.get("product")||"";
+  var divOpts=window.ASAD.DIV.map(function(d){return '<option value="'+d.id+'"'+(d.id===dId?" selected":"")+'>'+esc(d.name)+'</option>'}).join("");
+  var prodOpts='<option value="">General enquiry</option>';
+  if(dId){var d=div(dId);if(d){prodOpts+='<option value="">General enquiry</option>'+d.products.map(function(p){return '<option value="'+p.id+'"'+(p.id===pId?" selected":"")+'>'+esc(p.name)+'</option>'}).join("")}}
+  var ref=window.ASAD.sb.ref();
+  app.innerHTML='<div class="sh"><h2>Submit an Enquiry</h2><p>This demo stores your enquiry only in your browser.</p></div>'+(ref?'<div class="ntc blue"><strong>Referral:</strong> Linked to <code>'+esc(ref)+'</code>.</div>':'')+'<div class="card"><form id="ef" class="fg" novalidate><div class="fld full"><label>Full name *</label><input name="name"><div class="err">Required.</div></div><div class="fld"><label>Email *</label><input name="email" type="email"><div class="err">Valid email required.</div></div><div class="fld"><label>Phone</label><input name="phone"></div><div class="fld"><label>Division *</label><select name="division"><option value="">Choose…</option>'+divOpts+'</select><div class="err">Required.</div></div><div class="fld"><label>Product / service</label><select name="product" id="pf">'+prodOpts+'</select></div><div class="fld full"><label>Message *</label><textarea name="message" rows="4"></textarea><div class="err">Required.</div></div><div class="fld full"><button class="btn nvy blk" type="submit">Submit Enquiry</button></div></form></div><div id="res" style="margin-top:14px"></div>';
+  var f=document.getElementById("ef");
+  f.division.addEventListener("change",function(){var d=div(f.division.value);document.getElementById("pf").innerHTML='<option value="">General enquiry</option>'+(d?d.products.map(function(p){return '<option value="'+p.id+'">'+esc(p.name)+'</option>'}).join(""):"")});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();var ok=true;
+    ["name","email","division","message"].forEach(function(k){var el=f[k];var fld=el.closest(".fld");var bad=!el.value.trim();if(k==="email"&&el.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))bad=true;fld.classList.toggle("bad",bad);if(bad)ok=false});
+    if(!ok){toast("Please fix highlighted fields","err");return}
+    var r="ENQ-"+Math.floor(Math.random()*900000+100000);
+    var rec={ref:r,name:f.name.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),division:f.division.value,product:f.product.value,message:f.message.value.trim(),status:"Received (DEMO)",referralCode:window.ASAD.sb.ref()||"",createdAt:new Date().toISOString()};
+    var list=window.ASAD.sb.enquiries();list.unshift(rec);window.ASAD.sb.setEnquiries(list);
+    f.classList.add("hidden");
+    document.getElementById("res").innerHTML='<div class="card"><h3>Enquiry received — DEMO</h3><p>Your reference:</p><p style="font-size:22px;font-weight:800;color:var(--navy);letter-spacing:1px">'+esc(r)+'</p><p class="small muted">'+(rec.referralCode?'Linked to referral <code>'+esc(rec.referralCode)+'</code>. ':'')+'Save this reference.</p><a class="btn nvy" href="#/enq/'+encodeURIComponent(r)+'">View Enquiry</a></div>';
+    toast("Enquiry saved (DEMO)","ok");
+  });
+};
+window.ASAD.renderEnquiryLookup = function(app,ref){
+  ref=(ref||"").toUpperCase();var rec=window.ASAD.sb.enquiries().filter(function(e){return e.ref===ref})[0];var body='';
+  if(!rec){body='<div class="empty">No enquiry found for <strong>'+esc(ref)+'</strong>.</div>'}else{
+    var d=div(rec.division),p=rec.product?prod(rec.product):null;
+    body='<div class="card"><span class="pill d">DEMO RECORD</span><h3 style="margin-top:8px">'+esc(rec.ref)+'</h3><p class="small muted">Submitted '+new Date(rec.createdAt).toLocaleString()+'</p><ul class="spec"><li><span>Name</span><span>'+esc(rec.name)+'</span></li><li><span>Email</span><span>'+esc(rec.email)+'</span></li>'+(rec.phone?'<li><span>Phone</span><span>'+esc(rec.phone)+'</span></li>':'')+'<li><span>Division</span><span>'+esc(d?d.name:rec.division)+'</span></li>'+(p?'<li><span>Product</span><span>'+esc(p.product.name)+'</span></li>':'')+(rec.referralCode?'<li><span>Referral</span><span>'+esc(rec.referralCode)+'</span></li>':'')+'<li><span>Status</span><span>'+esc(rec.status)+'</span></li></ul><p class="small"><strong>Message:</strong> '+esc(rec.message)+'</p></div>';
+  }
+  app.innerHTML='<div class="sh"><h2>Enquiry Lookup</h2></div>'+body+'<div style="margin-top:14px"><a class="btn gh" href="#/">Back to Home</a></div>';
+};
+      function aiAnswer(q){
+  var tokens=q.toLowerCase().split(/\W+/).filter(function(t){return t.length>2});
+  if(!tokens.length)return{text:"Please ask a question about a division, product, campaign or creator program.",source:null};
+  var pub=window.ASAD.sb.kb().filter(function(k){return k.published});var best=null,bestScore=0;
+  pub.forEach(function(k){var text=(k.title+" "+k.keywords+" "+k.body).toLowerCase();var score=0;tokens.forEach(function(t){if(text.indexOf(t)>=0)score++});if(score>bestScore){bestScore=score;best=k}});
+  if(best&&bestScore>=1){return{text:best.body,source:best}}
+  return{text:"I don't have that confirmed. Please submit an enquiry with the relevant division or contact support directly. I will not guess prices, availability, medical information or commissions.",source:null};
+}
+window.ASAD.renderAI = function(app){
+  var suggestions=["CNG conversion","Medics screening","Travel packages","Creator program","Campaigns","Property inspection"];
+  app.innerHTML='<div class="sh"><h2>ASAD AI</h2><p>Ask ASAD. Discover. Connect. — Simulated retrieval engine.</p></div><div class="chat"><div class="chat-h"><span style="font-size:22px">🤖</span><div><strong>ASAD AI</strong><small>Simulated · Uses published knowledge base</small></div></div><div class="chat-b" id="cb"><div class="msg a">Hello! I am ASAD AI. I can tell you about the six ASAD divisions, products, campaigns and creator registration. I only answer using published knowledge. What would you like to know?<div class="src">Simulated engine · Demo knowledge</div></div></div><form class="chat-f" id="cf"><input id="ci" placeholder="Ask about a division, product or program…" autocomplete="off"><button type="submit">Send</button></form></div><div class="chips" id="sg" style="margin-top:10px">'+suggestions.map(function(s){return '<button class="chip" data-q="'+esc(s)+'">'+esc(s)+'</button>'}).join("")+'</div><div class="ntc" style="margin-top:12px"><strong>How this works (prototype).</strong> The AI is simulated: it matches your question against admin-published knowledge entries. No real language model is connected.</div>';
+  var cb=document.getElementById("cb");
+  function send(q){
+    if(!q.trim())return;var u=document.createElement("div");u.className="msg u";u.textContent=q;cb.appendChild(u);
+    var a=document.createElement("div");a.className="msg a";var ans=aiAnswer(q);
+    a.innerHTML=esc(ans.text)+(ans.source?'<div class="src">Source: '+esc(ans.source.title)+' · '+esc(ans.source.division||"group")+'</div>':'<div class="src">No published source matched.</div>');
+    setTimeout(function(){cb.appendChild(a);cb.scrollTop=cb.scrollHeight},280);cb.scrollTop=cb.scrollHeight;
+  }
+  document.getElementById("cf").addEventListener("submit",function(e){e.preventDefault();var i=document.getElementById("ci");send(i.value);i.value=""});
+  document.getElementById("sg").addEventListener("click",function(e){var b=e.target.closest(".chip");if(b)send(b.getAttribute("data-q"))});
+};
+      window.ASAD.renderCreators = function(app){
+  var list=window.ASAD.sb.creators();
+  var cards=list.length?list.map(function(c){return '<a class="dcard" href="#/creator/'+c.id+'"><span class="dic">🎬</span><h3>'+esc(c.displayName)+'</h3><p>'+esc(c.category||"Creator")+' · '+esc(c.country||"")+'</p><span class="pill '+(c.status==="Approved"?"ok":c.status==="Rejected"?"dn":"w")+'">'+esc(c.status)+'</span></a>'}).join(""):'<div class="empty" style="grid-column:1/-1">No creators registered yet. Sign up below to try the flow.</div>';
+  app.innerHTML='<div class="sh"><h2>ASAD Creator Network</h2><p>Content creators, influencers, actors, musicians, ambassadors, agents, distributors and referral partners.</p></div><div class="dgrid" style="margin-bottom:18px">'+cards+'</div><div class="sh"><h2>Register as a Creator (Demo)</h2><p>Registration does not promise work, employment or commission.</p></div><div class="card"><form id="crf" class="fg" novalidate><div class="fld"><label>Display name *</label><input name="displayName"><div class="err">Required.</div></div><div class="fld"><label>Creator type *</label><select name="category"><option>Content creator</option><option>Influencer</option><option>Actor / Actress</option><option>Musician</option><option>Celebrity</option><option>Brand ambassador</option><option>Video presenter</option><option>Real estate agent</option><option>Sales partner</option><option>Referral partner</option><option>Distributor</option></select></div><div class="fld"><label>Country</label><input name="country" placeholder="e.g. Nigeria"></div><div class="fld"><label>Location</label><input name="location" placeholder="City"></div><div class="fld full"><label>Short bio</label><textarea name="bio" rows="2"></textarea></div><div class="fld"><label>Content categories</label><input name="content" placeholder="tech, lifestyle, business"></div><div class="fld"><label>Social handles</label><input name="social" placeholder="@handle"></div><div class="fld"><label>Follower info (self-declared)</label><input name="followers" placeholder="e.g. 25,000"></div><div class="fld full"><label>Portfolio links</label><input name="portfolio" placeholder="Paste any links (demo only)"></div><div class="fld full"><label>Interested ASAD divisions</label><div style="display:flex;flex-wrap:wrap;gap:8px">'+window.ASAD.DIV.map(function(d){return '<label style="display:flex;align-items:center;gap:5px;font-size:13px"><input type="checkbox" name="divs" value="'+d.id+'"> '+esc(d.name)+'</label>'}).join("")+'</div></div><div class="fld full"><button class="btn nvy blk" type="submit">Submit Application</button><p class="small muted" style="margin-top:6px">Status will start as Pending → Under Review → Approved / Rejected.</p></div></form></div>';
+  var f=document.getElementById("crf");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();var ok=true;if(!f.displayName.value.trim()){f.displayName.closest(".fld").classList.add("bad");ok=false}if(!ok){toast("Display name required","err");return}
+    var divs=[];f.querySelectorAll('input[name="divs"]:checked').forEach(function(x){divs.push(x.value)});
+    var id="cr_"+Date.now().toString(36);
+    var c={id:id,displayName:f.displayName.value.trim(),category:f.category.value,country:f.country.value.trim(),location:f.location.value.trim(),bio:f.bio.value.trim(),content:f.content.value.trim(),social:f.social.value.trim(),followers:f.followers.value.trim(),portfolio:f.portfolio.value.trim(),divisions:divs,status:"Pending",refCode:refCode(id),createdAt:new Date().toISOString()};
+    var list=window.ASAD.sb.creators();list.push(c);window.ASAD.sb.setCreators(list);toast("Application submitted (DEMO)","ok");location.hash="#/creator/"+id;
+  });
+};
+window.ASAD.renderCreatorDash = function(app,id){
+  var c=creator(id);if(!c){app.innerHTML='<div class="empty">Creator not found.</div>';return}
+  var myApps=window.ASAD.sb.campaignApps().filter(function(a){return a.creatorId===id});
+  var myVideos=window.ASAD.sb.videos().filter(function(v){return v.creatorId===id});
+  var myClicks=window.ASAD.sb.clicks().filter(function(x){return x.creatorId===id});
+  var myEnq=window.ASAD.sb.enquiries().filter(function(e){return e.referralCode===c.refCode});
+  var mySales=myEnq.filter(function(e){return e.status==="Verified Sale (DEMO)"});
+  var approvedCommission=0;myEnq.forEach(function(e){if(e.status==="Verified Sale (DEMO)"){var camp=campaign(e.campaignId);if(camp&&camp.commissionAmount)approvedCommission+=camp.commissionAmount;}});
+  var statusPill=c.status==="Approved"?'ok':c.status==="Rejected"?'dn':'w';
+  app.innerHTML='<nav class="small muted" style="margin-bottom:8px"><a href="#/creators">Creators</a> › '+esc(c.displayName)+'</nav><div class="hero" style="padding:20px 16px"><span class="hero-b">CREATOR PROFILE</span><h1>'+esc(c.displayName)+'</h1><p class="tag">'+esc(c.category)+' · '+esc(c.country||"—")+'</p><p>'+esc(c.bio||"No bio provided.")+'</p><span class="pill '+statusPill+'">Status: '+esc(c.status)+'</span></div><div class="stats"><div class="stat"><div class="l">Referral clicks</div><div class="v">'+myClicks.length+'</div></div><div class="stat"><div class="l">Enquiries</div><div class="v">'+myEnq.length+'</div></div><div class="stat"><div class="l">Verified sales</div><div class="v">'+mySales.length+'</div></div><div class="stat"><div class="l">Approved commission</div><div class="v">DEMO ₦'+approvedCommission.toLocaleString()+'</div></div></div><div class="card"><h3>Your Referral Link (DEMO)</h3><p class="ref-bar"><code>'+esc(genRef(c.id))+'</code><br><span class="small muted">Opens the ASAD ONE referral landing.</span></p><div style="margin-top:8px"><a class="btn nvy sm" href="#/ref/'+c.id+'">Open referral link</a> <a class="btn gh sm" href="#/watch">Watch sponsored video</a> <a class="btn gh sm" href="#/studio">Upload a video</a></div></div><div class="card" style="margin-top:14px"><h3>Campaign applications</h3>'+(myApps.length?myApps.map(function(a){var camp=campaign(a.campaignId);return '<div class="row-i"><div class="mn"><strong>'+esc(camp?camp.title:"Campaign")+'</strong><small>Status: '+esc(a.status)+'</small></div></div>'}).join(""):'<div class="empty">No campaign applications yet.</div>')+'<div style="margin-top:10px"><a class="btn gh sm" href="#/campaigns">Browse campaigns</a></div></div><div class="card" style="margin-top:14px"><h3>Your submitted videos</h3>'+(myVideos.length?myVideos.map(function(v){return '<div class="row-i"><div class="mn"><strong>'+esc(v.title)+'</strong><small>Status: '+esc(v.status)+'</small></div></div>'}).join(""):'<div class="empty">No videos submitted yet.</div>')+'</div><div class="card" style="margin-top:14px"><h3>Your enquiries</h3>'+(myEnq.length?myEnq.map(function(e){return '<div class="row-i"><div class="mn"><strong>'+esc(e.ref)+' — '+esc(e.name)+'</strong><small>'+esc(e.status)+'</small></div></div>'}).join(""):'<div class="empty">No enquiries linked to your referral yet.</div>')+'</div>';
+};
+window.ASAD.renderRefLanding = function(app,cid){
+  var c=creator(cid);
+  app.innerHTML='<div class="hero" style="padding:26px 18px"><span class="hero-b">REFERRAL TRACKED</span><h1>You arrived via a creator referral</h1><p class="tag">Creator: '+esc(c?c.displayName:cid)+' · Code: <code>'+esc(refCode(cid))+'</code></p><p>Referral is active for this browser session. Any enquiry you submit from now on will be linked to this creator.</p><div class="hacts"><a class="btn pri" href="#/divisions">Browse divisions</a><a class="btn out" href="#/watch">Watch ASAD ONE</a><a class="btn out" href="#/ai">Ask ASAD AI</a></div></div><div class="ntc blue"><strong>Reference ID active:</strong> <code>'+esc(refCode(cid))+'</code>. Remember — this is a demonstration.</div>';
+  var cl=window.ASAD.sb.clicks();cl.unshift({id:newId("clk"),creatorId:cid,ts:new Date().toISOString(),type:"referral-landing"});window.ASAD.sb.setClicks(cl);
+};
+      window.ASAD.renderCampaigns = function(app){
+  var list=window.ASAD.sb.campaigns();
+  var cards=list.length?list.map(function(c){var d=div(c.division);return '<a class="dcard" href="#/campaign/'+c.id+'"><span class="dic">'+((d&&d.icon)||"📣")+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(d?d.name:c.division)+' · '+esc(c.commission||"Commission TBC")+'</p><span class="pill '+(c.status==="Active"?"ok":"g")+'">'+esc(c.status)+'</span></a>'}).join(""):'<div class="empty" style="grid-column:1/-1">No campaigns created.</div>';
+  app.innerHTML='<div class="sh"><h2>ASAD AD Marketplace</h2><p>Browse demonstration campaigns per division. Apply as a creator.</p></div><div class="dgrid">'+cards+'</div><div class="ntc"><strong>Note.</strong> All campaigns are DEMO campaigns. Commission is campaign-specific and set by admin.</div>';
+};
+window.ASAD.renderCampaign = function(app,id){
+  var c=campaign(id);if(!c){app.innerHTML='<div class="empty">Campaign not found.</div>';return}
+  var d=div(c.division);var myCreators=window.ASAD.sb.creators();var applied=window.ASAD.sb.campaignApps().filter(function(a){return a.campaignId===id});
+  app.innerHTML='<nav class="small muted" style="margin-bottom:8px"><a href="#/campaigns">Campaigns</a> › '+esc(c.title)+'</nav><div class="hero" style="padding:22px 18px"><span class="hero-b">DEMO CAMPAIGN</span><h1>'+esc(c.title)+'</h1><p class="tag">'+esc(d?d.name:c.division)+'</p><p>'+esc(c.desc)+'</p></div><div class="dtl"><div class="card"><h3>Brief</h3><ul class="spec"><li><span>Audience</span><span>'+esc(c.audience)+'</span></li><li><span>Duration</span><span>'+esc(c.duration)+'</span></li><li><span>Deadline</span><span>'+esc(c.deadline)+'</span></li><li><span>Requirements</span><span>'+esc(c.requirements)+'</span></li><li><span>Commission</span><span>'+esc(c.commission)+'</span></li></ul><p class="small"><strong>Instructions:</strong> '+esc(c.instructions)+'</p></div><div class="card"><h3>Apply as a creator</h3>'+(myCreators.length?myCreators.map(function(cc){return '<div class="row-i"><div class="mn"><strong>'+esc(cc.displayName)+'</strong><small>'+esc(cc.status)+'</small></div><button class="btn nvy sm" data-cid="'+cc.id+'">Apply</button></div>'}).join(""):'<div class="empty">Register a creator first.</div>')+'<div style="margin-top:10px"><a class="btn gh sm" href="#/creators">Register creator</a></div></div></div><div class="card" style="margin-top:14px"><h3>Applications</h3>'+(applied.length?applied.map(function(a){var cr=creator(a.creatorId);return '<div class="row-i"><div class="mn"><strong>'+esc(cr?cr.displayName:a.creatorId)+'</strong><small>Status: '+esc(a.status)+'</small></div></div>'}).join(""):'<div class="empty">No applications yet.</div>')+'</div><div class="ntc"><strong>Sponsored-content disclosure required.</strong> Approved content must carry #Sponsored or equivalent disclosure.</div>';
+  document.querySelectorAll("[data-cid]").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      var cid=btn.getAttribute("data-cid");var apps=window.ASAD.sb.campaignApps();
+      if(apps.some(function(a){return a.campaignId===id&&a.creatorId===cid})){toast("Already applied","err");return}
+      apps.push({id:newId("ca"),campaignId:id,creatorId:cid,status:"Under Review",createdAt:new Date().toISOString()});
+      window.ASAD.sb.setCampaignApps(apps);toast("Application submitted (DEMO)","ok");window.ASAD.renderCampaign(app,id);
+    });
+  });
+};
+window.ASAD.renderStudio = function(app){
+  var cr=window.ASAD.sb.creators();var campOpts=window.ASAD.sb.campaigns().map(function(c){return '<option value="'+c.id+'">'+esc(c.title)+'</option>'}).join("");var divOpts=window.ASAD.DIV.map(function(d){return '<option value="'+d.id+'">'+esc(d.name)+'</option>'}).join("");
+  app.innerHTML='<div class="sh"><h2>Creator Video Studio</h2><p>Upload, preview, and submit for admin review.</p></div><div class="notice ntc blue"><strong>Prototype limit.</strong> Your uploaded video is previewed locally and does NOT get uploaded to any server.</div><div class="card"><form id="vf" class="fg" novalidate><div class="fld full"><label>Creator</label><select name="creatorId" required>'+cr.map(function(c){return '<option value="'+c.id+'">'+esc(c.displayName)+'</option>'}).join("")+'</select></div><div class="fld full"><label>Video file (local preview)</label><div class="drop" id="drop"><input type="file" accept="video/*" id="vfile">Tap to pick a video from your phone. <div id="vstate" class="small muted" style="margin-top:6px">No file selected.</div></div></div><div class="fld full" id="prevwrap" style="display:none"><label>Preview</label><video id="vprev" controls playsinline style="width:100%;border-radius:10px;background:#000"></video></div><div class="fld full"><label>Video title *</label><input name="title"><div class="err">Required.</div></div><div class="fld full"><label>Caption</label><textarea name="caption" rows="2"></textarea></div><div class="fld"><label>Business division</label><select name="division">'+divOpts+'</select></div><div class="fld"><label>Advertised product</label><select name="product"><option value="">Not set</option></select></div><div class="fld full"><label>Attach campaign</label><select name="campaign"><option value="">No campaign</option>'+campOpts+'</select></div><div class="fld full"><button class="btn nvy blk" type="submit">Submit for Review</button></div></form></div><div class="card" style="margin-top:14px"><h3>All submissions</h3><div id="vlist"></div></div>';
+  var f=document.getElementById("vf");var drop=document.getElementById("drop");var fileIn=document.getElementById("vfile");var prev=document.getElementById("vprev");var prevWrap=document.getElementById("prevwrap");var vstate=document.getElementById("vstate");
+  fileIn.addEventListener("change",function(){var file=fileIn.files[0];if(!file)return;vstate.textContent=file.name+" ("+Math.round(file.size/1024)+" KB)";prev.src=URL.createObjectURL(file);prevWrap.style.display="block";drop.classList.add("on")});
+  f.division.addEventListener("change",function(){var d=div(f.division.value);f.product.innerHTML='<option value="">Not set</option>'+(d?d.products.map(function(p){return '<option value="'+p.id+'">'+esc(p.name)+'</option>'}).join(""):"")});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();if(!f.creatorId.value){toast("Register a creator first","err");return}if(!f.title.value.trim()){f.title.closest(".fld").classList.add("bad");toast("Title required","err");return}
+    var id=newId("v");var v={id:id,creatorId:f.creatorId.value,title:f.title.value.trim(),caption:f.caption.value.trim(),division:f.division.value,product:f.product.value,campaign:f.campaign.value,status:"Submitted",createdAt:new Date().toISOString()};
+    var list=window.ASAD.sb.videos();list.push(v);window.ASAD.sb.setVideos(list);toast("Submitted for review","ok");window.ASAD.renderStudio(app);
+  });
+  var list=window.ASAD.sb.videos();var el=document.getElementById("vlist");
+  if(!list.length){el.innerHTML='<div class="empty">No videos yet.</div>'}else{
+    el.innerHTML=list.map(function(v){var cr=creator(v.creatorId);return '<div class="row-i"><div class="mn"><strong>'+esc(v.title)+'</strong><small>'+esc(cr?cr.displayName:v.creatorId)+' · '+esc(v.status)+'</small></div><div class="ac">'+(v.status==="Published"?'<a class="btn gh sm" href="#/watch/'+v.id+'">Watch</a>':'')+'</div></div>'}).join("");
+  }
+};
+      window.ASAD.renderWatch = function(app,videoId){
+  var vids=window.ASAD.sb.videos();var v=videoId?vids.filter(function(x){return x.id===videoId})[0]:vids.filter(function(x){return x.status==="Published"})[0];
+  if(!v){v={id:"demo",title:"ASAD ONE demo",campaign:"c1",product:"en1",division:"energy",creatorId:""}}
+  var camp=campaign(v.campaign);var prod_found=v.product?prod(v.product):null;if(!prod_found&&camp&&camp.product)prod_found=prod(camp.product);var creatorObj=creator(v.creatorId);
+  app.innerHTML='<div class="sh"><h2>ASAD ONE Video Player</h2><p>Sponsored overlays, clickable product cards, referral tracking.</p></div><div class="ntc blue"><strong>Platform limitation.</strong> This player controls ads only inside ASAD ONE. It cannot insert overlays into TikTok, Instagram or Facebook videos.</div><div class="player-wrap" id="pw"><div class="sponsored-badge"></div><div class="simvid" id="sim"><div class="big">🎬</div><div class="center-lbl">DEMO PLACEHOLDER VIDEO</div></div><div class="ad-overlay" id="ado"><h4>'+esc(camp?camp.title:"Sponsored ad")+'</h4><p>'+esc(camp?camp.desc:"Demo sponsored message")+'</p><div class="ad-cards" id="adcards"></div></div></div><div class="card" style="margin-top:12px"><h3>'+esc(v.title)+'</h3><p class="small muted">'+(creatorObj?'Creator: '+esc(creatorObj.displayName)+' · ':'')+'Division: '+esc(v.division||"—")+' · Campaign: '+esc(camp?camp.title:"—")+'</p>'+(prod_found?'<div class="ref-bar"><strong>Sponsored product:</strong> '+esc(prod_found.product.name)+' · <a href="#/p/'+prod_found.product.id+'">View product page</a></div>':'')+(creatorObj?'<div class="ref-bar" style="margin-top:6px"><strong>Creator referral:</strong> <code>'+esc(genRef(creatorObj.id))+'</code></div>':'')+'<div style="margin-top:10px"><a class="btn nvy" href="#/enquiry'+(prod_found?'?division='+prod_found.division.id+'&product='+prod_found.product.id':'')+'">Enquire about this ad</a></div></div><div class="card" style="margin-top:14px"><h3>Other videos</h3><div class="list" id="vlist"></div></div>';
+  var cardsEl=document.getElementById("adcards");var cards="";
+  if(prod_found){cards+='<a class="ad-card" href="#/p/'+prod_found.product.id+'" data-ad="'+prod_found.product.id+'"><span class="ic">'+prod_found.product.icon+'</span><div><b>'+esc(prod_found.product.name)+'</b><small>Sponsored · '+esc(prod_found.division.name)+'</small></div></a>'}
+  var suggestion=window.ASAD.DIV[(Math.floor(Math.random()*window.ASAD.DIV.length))].products[0];
+  cards+='<a class="ad-card" href="#/p/'+suggestion.id+'" data-ad="'+suggestion.id+'"><span class="ic">'+suggestion.icon+'</span><div><b>'+esc(suggestion.name)+'</b><small>Advertisement</small></div></a>';
+  cardsEl.innerHTML=cards;
+  setTimeout(function(){var o=document.getElementById("ado");if(o)o.classList.add("show")},1400);
+  document.querySelectorAll(".ad-card").forEach(function(el){el.addEventListener("click",function(){var pid=el.getAttribute("data-ad");var clicks=window.ASAD.sb.clicks();clicks.unshift({id:newId("clk"),creatorId:creatorObj?creatorObj.id:"",videoId:v.id,productId:pid,ts:new Date().toISOString(),type:"ad-click"});window.ASAD.sb.setClicks(clicks);if(creatorObj)window.ASAD.sb.setRef(creatorObj.id)})});
+  document.getElementById("vlist").innerHTML=vids.map(function(x){return '<div class="row-i"><div class="mn"><strong>'+esc(x.title)+'</strong><small>'+esc(x.status)+'</small></div><a class="btn gh sm" href="#/watch/'+x.id+'">Watch</a></div>'}).join("");
+};
+      window.ASAD.renderAdmin = function(app){
+  var role=window.ASAD.sb.role();
+  var roles=[{id:"super",label:"Group Super Admin"},{id:"energy",label:"Division Manager — Energy"},{id:"infratech",label:"Division Manager — Infra-Tech"},{id:"medics",label:"Division Manager — Medics"},{id:"fertilizer",label:"Division Manager — Fertilizer"},{id:"travel",label:"Division Manager — Travel"},{id:"shelter",label:"Division Manager — Shelter"},{id:"marketing",label:"Marketing Administrator"},{id:"sales",label:"Sales Representative"},{id:"support",label:"Customer Support"},{id:"creator",label:"Creator Manager"},{id:"finance",label:"Finance / Commission Reviewer"}];
+  var tabs=["Overview","Enquiries","Creators","Campaigns","Videos","Referrals","Knowledge","Ad Config"];
+  app.innerHTML='<div class="sh"><h2>Group Administration</h2><p>Client-side demo only — role switching is NOT secure authentication.</p></div><div class="card" style="margin-bottom:12px"><label class="small"><strong>Demo role:</strong></label><br><select id="role" style="padding:8px 10px;max-width:320px;width:100%;margin-top:6px;border:1px solid var(--line);border-radius:8px">'+roles.map(function(r){return '<option value="'+r.id+'"'+(r.id===role?" selected":"")+'>'+r.label+'</option>'}).join("")+'</select><p class="small muted" style="margin-top:6px">Division managers see only their division. Super Admin sees all six.</p></div><div class="tabs" id="tabs">'+tabs.map(function(t,i){return '<button class="tab'+(i===0?" on":"")+'" data-t="'+t+'">'+t+'</button>'}).join("")+'</div><div id="ap"></div>';
+  document.getElementById("role").addEventListener("change",function(e){window.ASAD.sb.setRole(e.target.value);window.ASAD.renderAdmin(app)});
+  document.querySelectorAll("#tabs .tab").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll("#tabs .tab").forEach(function(x){x.classList.remove("on")});b.classList.add("on");window.ASAD.renderAdminPanel(b.getAttribute("data-t"))})});
+  window.ASAD.renderAdminPanel("Overview");
+};
+window.ASAD.renderAdminPanel = function(tab){
+  var role=window.ASAD.sb.role();var scope=role==="super"||role==="marketing"||role==="creator"||role==="finance"||role==="sales"||role==="support"?"all":role;
+  function inScope(divId){return scope==="all"||divId===scope}
+  var el=document.getElementById("ap");
+  if(tab==="Overview"){
+    var enq=window.ASAD.sb.enquiries().filter(function(e){return inScope(e.division)});var cr=window.ASAD.sb.creators();var apps=window.ASAD.sb.campaignApps();var vids=window.ASAD.sb.videos().filter(function(v){return inScope(v.division)});var clicks=window.ASAD.sb.clicks();var verified=enq.filter(function(e){return e.status==="Verified Sale (DEMO)"});var conversion=enq.length?((verified.length/enq.length)*100).toFixed(1):"0";
+    el.innerHTML='<div class="stats"><div class="stat"><div class="l">Creators</div><div class="v">'+cr.length+'</div></div><div class="stat"><div class="l">Campaigns</div><div class="v">'+window.ASAD.sb.campaigns().filter(function(c){return inScope(c.division)}).length+'</div></div><div class="stat"><div class="l">Videos</div><div class="v">'+vids.length+'</div></div><div class="stat"><div class="l">Enquiries</div><div class="v">'+enq.length+'</div></div><div class="stat"><div class="l">Referral clicks</div><div class="v">'+clicks.length+'</div></div><div class="stat"><div class="l">Verified sales</div><div class="v">'+verified.length+'</div></div><div class="stat"><div class="l">Conversion</div><div class="v">'+conversion+'%</div></div><div class="stat"><div class="l">Applications</div><div class="v">'+apps.length+'</div></div></div><div class="ntc"><strong>Analytics clarity.</strong> Views on ASAD ONE are measured. External social-platform views are NOT known to this prototype. Demo sales are marked by admin.</div>';
+    return;
+  }
+  if(tab==="Enquiries"){
+    var list=window.ASAD.sb.enquiries().filter(function(e){return inScope(e.division)});if(!list.length){el.innerHTML='<div class="empty">No enquiries in scope.</div>';return}
+    el.innerHTML='<div class="list">'+list.map(function(e){var nextActions='';if(e.status==="Received (DEMO)")nextActions='<button class="btn nvy sm" data-action="review" data-ref="'+e.ref+'">Review</button>';if(e.status==="Under Review (DEMO)")nextActions='<button class="btn nvy sm" data-action="verify" data-ref="'+e.ref+'">Mark verified sale</button>';return '<div class="row-i"><div class="mn"><strong>'+esc(e.ref)+' — '+esc(e.name)+'</strong><small>'+esc(e.division)+' · '+esc(e.status)+' · '+new Date(e.createdAt).toLocaleDateString()+(e.referralCode?' · Referral '+esc(e.referralCode):'')+'</small></div><div class="ac">'+nextActions+'</div></div>'}).join("")+'</div>';
+    el.querySelectorAll('[data-action]').forEach(function(btn){btn.addEventListener("click",function(){var ref=btn.getAttribute("data-ref");var act=btn.getAttribute("data-action");var list=window.ASAD.sb.enquiries();var idx=-1;for(var i=0;i<list.length;i++)if(list[i].ref===ref){idx=i;break}if(idx<0)return;if(act==="review")list[idx].status="Under Review (DEMO)";if(act==="verify")list[idx].status="Verified Sale (DEMO)";window.ASAD.sb.setEnquiries(list);toast("Updated (DEMO)","ok");window.ASAD.renderAdminPanel("Enquiries")})});
+    return;
+  }
+  if(tab==="Creators"){
+    var cr=window.ASAD.sb.creators();if(!cr.length){el.innerHTML='<div class="empty">No creators registered.</div>';return}
+    el.innerHTML='<div class="list">'+cr.map(function(c){return '<div class="row-i"><div class="mn"><strong>'+esc(c.displayName)+'</strong><small>'+esc(c.category)+' · '+esc(c.status)+'</small></div><div class="ac">'+(c.status!=="Approved"?'<button class="btn nvy sm" data-cid="'+c.id+'" data-s="Approved">Approve</button>':'')+(c.status!=="Rejected"?'<button class="btn gh sm" data-cid="'+c.id+'" data-s="Rejected">Reject</button>':'')+'<a class="btn gh sm" href="#/creator/'+c.id+'">View</a></div></div>'}).join("")+'</div>';
+    el.querySelectorAll('[data-cid]').forEach(function(btn){btn.addEventListener("click",function(){var cid=btn.getAttribute("data-cid"),s=btn.getAttribute("data-s");var list=window.ASAD.sb.creators();for(var i=0;i<list.length;i++)if(list[i].id===cid){list[i].status=s;break}window.ASAD.sb.setCreators(list);toast("Creator "+s,"ok");window.ASAD.renderAdminPanel("Creators")})});
+    return;
+  }
+  if(tab==="Campaigns"){
+    var camps=window.ASAD.sb.campaigns().filter(function(c){return inScope(c.division)});
+    el.innerHTML='<div class="list">'+camps.map(function(c){return '<div class="row-i"><div class="mn"><strong>'+esc(c.title)+'</strong><small>'+esc(c.division)+' · '+esc(c.status)+' · '+esc(c.commission||"")+'</small></div><a class="btn gh sm" href="#/campaign/'+c.id+'">View</a></div>'}).join("")+'</div>';
+    return;
+  }
+  if(tab==="Videos"){
+    var vids=window.ASAD.sb.videos().filter(function(v){return inScope(v.division)});if(!vids.length){el.innerHTML='<div class="empty">No videos.</div>';return}
+    el.innerHTML='<div class="list">'+vids.map(function(v){return '<div class="row-i"><div class="mn"><strong>'+esc(v.title)+'</strong><small>'+esc(v.status)+' · '+new Date(v.createdAt).toLocaleDateString()+'</small></div><div class="ac">'+(v.status!=="Approved"?'<button class="btn nvy sm" data-vid="'+v.id+'" data-s="Approved">Approve</button>':'')+(v.status!=="Rejected"?'<button class="btn gh sm" data-vid="'+v.id+'" data-s="Rejected">Reject</button>':'')+(v.status!=="Published"?'<button class="btn nvy sm" data-vid="'+v.id+'" data-s="Published">Publish</button>':'')+'</div></div>'}).join("")+'</div>';
+    el.querySelectorAll('[data-vid]').forEach(function(btn){btn.addEventListener("click",function(){var vid=btn.getAttribute("data-vid"),s=btn.getAttribute("data-s");var list=window.ASAD.sb.videos();for(var i=0;i<list.length;i++)if(list[i].id===vid){list[i].status=s;break}window.ASAD.sb.setVideos(list);toast("Video "+s,"ok");window.ASAD.renderAdminPanel("Videos")})});
+    return;
+  }
+  if(tab==="Referrals"){
+    var enq=window.ASAD.sb.enquiries().filter(function(e){return e.referralCode&&inScope(e.division)});var clicks=window.ASAD.sb.clicks();
+    el.innerHTML='<div class="stats"><div class="stat"><div class="l">Clicks</div><div class="v">'+clicks.length+'</div></div><div class="stat"><div class="l">Referred enquiries</div><div class="v">'+enq.length+'</div></div><div class="stat"><div class="l">Verified sales</div><div class="v">'+enq.filter(function(e){return e.status==="Verified Sale (DEMO)"}).length+'</div></div><div class="stat"><div class="l">Commission status</div><div class="v" style="font-size:13px">See enquiries</div></div></div><h3>Referred enquiries</h3>'+(enq.length?'<div class="list">'+enq.map(function(e){return '<div class="row-i"><div class="mn"><strong>'+esc(e.ref)+' — '+esc(e.name)+'</strong><small>Ref: '+esc(e.referralCode)+' · '+esc(e.status)+'</small></div></div>'}).join("")+'</div>':'<div class="empty">No referred enquiries yet.</div>');
+    return;
+  }
+  if(tab==="Knowledge"){
+    var kb=window.ASAD.sb.kb();
+    el.innerHTML='<div class="ntc blue"><strong>ASAD AI Knowledge base.</strong> Only entries marked Published are used by the assistant. Edit any entry then save — the AI will use the updated version immediately.</div><div class="list">'+kb.map(function(k){return '<div class="card" style="padding:12px"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><strong>'+esc(k.title)+'</strong><span class="pill '+(k.published?"ok":"g")+'">'+esc(k.published?"Published":"Draft")+'</span></div><p class="small muted" style="margin:4px 0">'+esc(k.division||"group")+'</p><textarea rows="3" data-kid="'+k.id+'" style="width:100%;padding:8px;border-radius:8px;border:1px solid var(--line);font-size:13px">'+esc(k.body)+'</textarea><div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><button class="btn nvy sm" data-save="'+k.id+'">Save</button><button class="btn gh sm" data-toggle="'+k.id+'">'+(k.published?"Archive":"Publish")+'</button></div></div>'}).join("")+'</div><div class="card" style="margin-top:12px"><h3>Add new knowledge</h3><form id="kadd" class="fg"><div class="fld"><label>Title</label><input name="title"></div><div class="fld"><label>Division id (or blank)</label><input name="division" placeholder="energy / medics / …"></div><div class="fld full"><label>Keywords</label><input name="keywords"></div><div class="fld full"><label>Body</label><textarea name="body" rows="3"></textarea></div><div class="fld full"><button class="btn nvy" type="submit">Add as published</button></div></form></div>';
+    el.querySelectorAll("[data-save]").forEach(function(btn){btn.addEventListener("click",function(){var id=btn.getAttribute("data-save");var ta=el.querySelector('textarea[data-kid="'+id+'"]');var kb=window.ASAD.sb.kb();for(var i=0;i<kb.length;i++)if(kb[i].id===id){kb[i].body=ta.value;break}window.ASAD.sb.setKb(kb);toast("Knowledge updated — AI now uses it","ok")})});
+    el.querySelectorAll("[data-toggle]").forEach(function(btn){btn.addEventListener("click",function(){var id=btn.getAttribute("data-toggle");var kb=window.ASAD.sb.kb();for(var i=0;i<kb.length;i++)if(kb[i].id===id){kb[i].published=!kb[i].published;break}window.ASAD.sb.setKb(kb);window.ASAD.renderAdminPanel("Knowledge")})});
+    document.getElementById("kadd").addEventListener("submit",function(e){e.preventDefault();var f=e.target;var k={id:newId("k"),title:f.title.value.trim()||"Untitled",division:f.division.value.trim(),keywords:f.keywords.value.trim(),body:f.body.value.trim(),published:true};if(!k.body){toast("Body required","err");return}var kb=window.ASAD.sb.kb();kb.push(k);window.ASAD.sb.setKb(kb);toast("Knowledge added","ok");window.ASAD.renderAdminPanel("Knowledge")});
+    return;
+  }
+  if(tab==="Ad Config"){
+    var vids=window.ASAD.sb.videos();var camps=window.ASAD.sb.campaigns();var cfg=window.ASAD.sb.adConfig();
+    el.innerHTML='<div class="card"><h3>Choose which video + campaign the ASAD ONE player uses</h3><div class="fld" style="margin-bottom:10px"><label>Video</label><select id="vsel">'+vids.map(function(v){return '<option value="'+v.id+'"'+(cfg.video===v.id?" selected":"")+'>'+esc(v.title)+' — '+esc(v.status)+'</option>'}).join("")+'</select></div><div class="fld" style="margin-bottom:10px"><label>Campaign</label><select id="csel">'+camps.map(function(c){return '<option value="'+c.id+'"'+(cfg.campaign===c.id?" selected":"")+'>'+esc(c.title)+'</option>'}).join("")+'</select></div><button class="btn nvy" id="saveCfg">Save ad configuration</button></div>';
+    document.getElementById("saveCfg").addEventListener("click",function(){var v=document.getElementById("vsel").value,c=document.getElementById("csel").value;window.ASAD.sb.setAdConfig({video:v,campaign:c});toast("Ad config saved","ok")});
+    return;
+  }
+};
